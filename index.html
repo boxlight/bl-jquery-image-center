@@ -34,7 +34,7 @@
       <section>
         <div id="title">
           <h1>jQuery Image Center</h1>
-          <p>Centers an image by moving, cropping and filling spaces inside it's parent container.</p>
+          <p>Centers an image by moving, cropping and filling spaces inside it's parent container. Maintains aspect ratio.</p>
           <hr>
           <span class="credits left">Project maintained by <a href="https://github.com/boxlight">boxlight</a></span>
           <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></span>
@@ -45,11 +45,18 @@
 <p>Centers an image by moving, cropping and filling spaces inside it's parent container. This plugin maintains aspect
 ratio giving it a very professional looking finish in most situation.</p>
 
+<h2>Installation</h2>
+<p>As with most plugins, include the downloaded javascript file in your page after jQuery itself:</p>
+
+<script src="https://gist.github.com/3359780.js?file=gistfile1.html"></script>
+
 <h2>Examples</h2>
 
 <p>To demonstrate how this works, let's use this cute <a href="http://www.moshimonsters.com/" target="_blank">Moshi Monster</a> which is 275 x 284 pixels.</p>
 
-<img src="images/smallImage.png" />
+<p class="center">
+  <img src="images/smallImage.png" />
+</p>
 
 <p>A situation will occassionally arise where you need to show a bunch of these monsters, for example in a list of status updates which have the icon alongside, but to keep the design consistent they all need to fit the same area and your thumbnails might not be the exact size you require for whatever reason.</p>
 
@@ -93,6 +100,8 @@ ratio giving it a very professional looking finish in most situation.</p>
   $('#imageCenterResize img').imageCenterResize();
 </script>
 
+<p>
+<p>Any bugs, suggestions or improvements please report them on <a href="http://github.com/boxlight/bl-jquery-image-center">Github</a>.</p>
 
 </section>
 
