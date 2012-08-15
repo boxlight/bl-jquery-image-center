@@ -38,13 +38,44 @@
           <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></span>
         </div>
 
-        <h1>bl-jquery-center</h1>
+        <h1>bl-jquery-image-center</h1>
 
-<p>Centers an image by moving, cropping and filling spaces inside it's parent container.</p>
+<p>Centers an image by moving, cropping and filling spaces inside it's parent container. This plugin maintains aspect
+ratio giving it a very professional looking finish in most situation.</p>
+
+<h2>Usage</h2>
+
+<p>Include the plugin in your page.</p>
+
+<div class="highlight"><pre><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"/path/to/jquery.blImageCenter.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</pre></div>
+
+<p>Use a jquery selector on the image(s) you wish to perfectly fit inside their parent container and call imageCropFill()</p>
+
+<div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">'img'</span><span class="p">).</span><span class="nx">imageCropFill</span><span class="p">();</span>
+</pre></div>
+
+<p>To demonstrate what is happening here,</p>
+
+<p>If you want the image to completely fill the area and crop the image whilst maintaining aspect ratio, then
+imageCenterResize() is the function you are looking for.</p>
+
+<div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">'img'</span><span class="p">).</span><span class="nx">imageCenterResize</span><span class="p">();</span>
+</pre></div>
       </section>
 
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-4113168-20");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
   </body>
 </html>
