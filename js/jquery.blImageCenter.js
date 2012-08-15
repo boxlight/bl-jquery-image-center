@@ -5,6 +5,7 @@
  * @license MIT License
  * @description Centers an image by moving, cropping and filling spaces inside it's parent container. Call 
  * this on a set of images to have them fill their parent whilst maintaining aspect ratio
+ * @author Robert Cambridge
  *
  * Usage: See documentation at http://boxlight.github.com/bl-jquery-image-center
  */
