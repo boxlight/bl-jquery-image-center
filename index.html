@@ -6,7 +6,9 @@
     <title>BL jQuery Image Center by boxlight</title>
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <link rel="stylesheet" href="stylesheets/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="https://raw.github.com/boxlight/bl-jquery-image-center/master/js/jquery.blImageCenter.js"></script>
     <script src="javascripts/respond.js"></script>
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -43,26 +45,56 @@
 <p>Centers an image by moving, cropping and filling spaces inside it's parent container. This plugin maintains aspect
 ratio giving it a very professional looking finish in most situation.</p>
 
-<h2>Usage</h2>
+<h2>Examples</h2>
 
-<p>Include the plugin in your page.</p>
+<p>To demonstrate how this works, let's use this cute <a href="http://www.moshimonsters.com/" target="_blank">Moshi Monster</a> which is 275 x 284 pixels.</p>
 
-<div class="highlight"><pre><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"/path/to/jquery.blImageCenter.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-</pre></div>
+<img src="images/smallImage.png" />
 
-<p>Use a jquery selector on the image(s) you wish to perfectly fit inside their parent container and call imageCropFill()</p>
+<p>A situation will occassionally arise where you need to show a bunch of these monsters, for example in a list of status updates which have the icon alongside, but to keep the design consistent they all need to fit the same area and your thumbnails might not be the exact size you require for whatever reason.</p>
 
-<div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">'img'</span><span class="p">).</span><span class="nx">imageCropFill</span><span class="p">();</span>
-</pre></div>
+<p>Here is how this would look in a list where each image has a parent container of 200 x 200 pixels.</p>
 
-<p>To demonstrate what is happening here,</p>
+<ul class="image-list">
+    <li><img src="images/smallImage.png" /></li>
+    <li><img src="images/smallImage.png" /></li>
+    <li><img src="images/smallImage.png" /></li>
+</ul>
 
-<p>If you want the image to completely fill the area and crop the image whilst maintaining aspect ratio, then
-imageCenterResize() is the function you are looking for.</p>
+<p>As you can see we can't see half of our poor monster because of the forced dimensions. This is easily fixed using this plugin by running the following:</p>
 
-<div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">'img'</span><span class="p">).</span><span class="nx">imageCenterResize</span><span class="p">();</span>
-</pre></div>
-      </section>
+<script src="https://gist.github.com/3359204.js"> </script>
+
+<p> This is what they look like now: </p>
+
+<ul id="imageCropFill" class="image-list">
+    <li><img src="images/smallImage.png" /></li>
+    <li><img src="images/smallImage.png" /></li>
+    <li><img src="images/smallImage.png" /></li>
+</ul>
+
+<script type="text/javascript">
+  $('#imageCropFill img').imageCropFill();
+</script>
+
+<p>This has cropped and repositioned the image inside the container to provide a professional image.</p>
+
+<p>Sometimes you may also want resize the image to ensure it fits the container perfectly. This can be done using imageCenterResize().
+
+<script src="https://gist.github.com/3359220.js"> </script>
+
+<ul id="imageCenterResize" class="image-list">
+    <li><img src="images/smallImage.png" /></li>
+    <li><img src="images/smallImage.png" /></li>
+    <li><img src="images/smallImage.png" /></li>
+</ul>
+
+<script type="text/javascript">
+  $('#imageCenterResize img').imageCenterResize();
+</script>
+
+
+</section>
 
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->

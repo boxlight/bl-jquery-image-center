@@ -611,10 +611,6 @@ strong {
   padding: 0 20px;
 }
 
-section img {
-  max-width: 100%;
-}
-
 blockquote {
   border-left: 3px solid #ffcc00;
   margin: 0;
