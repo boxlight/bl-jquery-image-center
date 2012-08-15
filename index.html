@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>jQuery Image Center by boxlight</title>
+    <title>jQuery Image Center by BOXLIGHT</title>
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <link rel="stylesheet" href="stylesheets/main.css">
@@ -37,8 +37,8 @@
           <h1>jQuery Image Center</h1>
           <p>Centers an image by moving, cropping and filling spaces inside it's parent container. Maintains aspect ratio.</p>
           <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/boxlight">boxlight</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></span>
+          <span class="credits left">Project maintained by <a href="https://github.com/boxlight">BOXLIGHT</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; </span>
         </div>
 
         <h1>bl-jquery-image-center</h1>
@@ -82,32 +82,62 @@ ratio giving it a very professional looking finish in most situation.</p>
 </ul>
 
 <script type="text/javascript">
-  $('#imageCropFill img').imageCropFill();
+  $('#imageCropFill img').centerImage('outside');
 </script>
 
 <p>This has cropped and repositioned the image inside the container to provide a more desireable effect.</p>
 
-<p>Sometimes you may also want resize the image to ensure it fits the container perfectly. This can be done using imageCenterResize().
+<p>By default, the plugin uses <i>outside</i> mode which ensures there is no white space by resizing the image to fit the entire parent container. There is however support for <i>inside</i> mode which will center the image and keep it fully visible with no cropping. This is achieved by passing 'inside' as the first parameter to centerImage()</p>
 
 <script src="https://gist.github.com/3359220.js"> </script>
 
+<p>To demonstrate this we'll use this guy who clearly seems OK with us choosing him:</p>
+
+<p class="center">
+  <img src="images/smallImage.png" />
+</p>
+
+<p>This is how it appears without any intervention:</p>
+
+<ul class="image-list">
+    <li><img src="images/longIcon.png" /></li>
+    <li><img src="images/longIcon.png" /></li>
+    <li><img src="images/longIcon.png" /></li>
+</ul>
+
+And here it is using <i>inside</i> as described above:
+
 <ul id="imageCenterResize" class="image-list">
-    <li><img src="images/smallImage.png" /></li>
-    <li><img src="images/smallImage.png" /></li>
-    <li><img src="images/smallImage.png" /></li>
+    <li><img src="images/longIcon.png" /></li>
+    <li><img src="images/longIcon.png" /></li>
+    <li><img src="images/longIcon.png" /></li>
 </ul>
 
 <script type="text/javascript">
-  $('#imageCenterResize img').imageCenterResize();
+  $('#imageCenterResize img').centerImage('inside');
 </script>
 
-<p>
+<p>To better understand the difference, here is what it looks like when we use the default setting by calling <i>centerImage()</i> without any parameters:</p>
+
+<ul id="imageCropFillJapanese" class="image-list">
+    <li><img src="images/longIcon.png" /></li>
+    <li><img src="images/longIcon.png" /></li>
+    <li><img src="images/longIcon.png" /></li>
+</ul>
+
+<script type="text/javascript">
+  $('#imageCropFillJapanese img').centerImage();
+</script>
+
+
 <p>Any bugs, suggestions or improvements please report them on <a href="http://github.com/boxlight/bl-jquery-image-center">Github</a>.</p>
+
+<p>Follow us on <a href="http://twitter.com/boxlightmedia">Twitter</a> and <a href="http://www.facebook.com/BoxlightMedia">Facebook</a>.
 
 </section>
 
 <footer>
-  <p>&copy; Copyright <a href="http://www.boxlightmedia.com">Boxlight Media Ltd</a> 2012</p>
+  <p>&copy; Copyright <a href="http://www.boxlightmedia.com">Boxlight Media Ltd</a> 2012. Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a>.</p>
 </footer>
 
     </div>
