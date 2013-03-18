@@ -22,7 +22,7 @@ $.fn.centerImage = function(method, callback) {
     // parent CSS should be in stylesheet, but to reinforce:
     $div.css({
       overflow: 'hidden',
-      position: 'relative'
+      position: $div.css('position') == 'absolute' ? 'absolute' : 'relative'
     });
 
     // temporarily set the image size naturally so we can get the aspect ratio
