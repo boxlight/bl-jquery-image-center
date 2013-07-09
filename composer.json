@@ -2,7 +2,7 @@
     "name": "boxlight/bl-jquery-image-center",
     "description": "jQuery plugin which centers an image by moving, cropping and filling spaces inside it's parent container. This plugin maintains aspect ratio giving it a very professional looking finish in most situations.",
     "keywords": ["javascript", "jquery", "image", "center", "crop", "fill"],
-    "version": "1.0",
+    "version": "1.0.1",
     "authors": [
         {
             "name": "Robert Cambridge",
