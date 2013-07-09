@@ -1,9 +1,9 @@
 /**
- * bl-jquery-image-center jQuery Plugin 
+ * bl-jquery-image-center jQuery Plugin
  *
  * @copyright Boxlight Media Ltd. 2012
  * @license MIT License
- * @description Centers an image by moving, cropping and filling spaces inside it's parent container. Call 
+ * @description Centers an image by moving, cropping and filling spaces inside it's parent container. Call
  * this on a set of images to have them fill their parent whilst maintaining aspect ratio
  * @author Robert Cambridge
  *
@@ -87,8 +87,8 @@ $.fn.centerImage = function(method, callback) {
           })
         .end();
 
-        // IE9 won't always trigger the load event. fix it.
-        if (navigator.userAgent.indexOf("Trident/5") >= 0) {
+        // IE9/10 won't always trigger the load event. fix it.
+        if (navigator.userAgent.indexOf("Trident/5") >= 0 || navigator.userAgent.indexOf("Trident/6")) {
           el.src = el.src;
         }
       })(this);
